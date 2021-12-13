@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="835.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.inaoe.rna.view.RootLayoutController">
+   <top>
+      <AnchorPane prefHeight="87.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="tfN" layoutX="24.0" layoutY="6.0" prefHeight="25.0" prefWidth="48.0" text="10" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="6.0" />
+            <Button defaultButton="true" layoutX="178.0" layoutY="46.0" mnemonicParsing="false" onAction="#onActionbGenerate" prefHeight="25.0" prefWidth="123.0" text="Generate" AnchorPane.leftAnchor="10.0" />
+            <Label layoutX="369.0" layoutY="14.0" text="n" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+            <Label layoutX="89.0" layoutY="10.0" text="A" />
+            <TextField fx:id="tfA" layoutX="109.0" layoutY="5.0" prefHeight="25.0" prefWidth="48.0" text="500" AnchorPane.topAnchor="6.0" />
+            <Label layoutX="180.0" layoutY="11.0" text="B" />
+            <Label layoutX="259.0" layoutY="11.0" text="C" />
+            <Label layoutX="347.0" layoutY="10.0" text="D" />
+            <TextField fx:id="tfB" layoutX="194.0" layoutY="6.0" prefHeight="25.0" prefWidth="48.0" text="500" AnchorPane.topAnchor="6.0" />
+            <TextField fx:id="tfC" layoutX="275.0" layoutY="6.0" prefHeight="25.0" prefWidth="48.0" text="200" AnchorPane.topAnchor="6.0" />
+            <TextField fx:id="tfD" layoutX="359.0" layoutY="6.0" prefHeight="25.0" prefWidth="48.0" text="500" AnchorPane.topAnchor="6.0" />
+            <TextField fx:id="tfNPrime" layoutX="436.0" layoutY="6.0" prefHeight="25.0" prefWidth="48.0" text="11" AnchorPane.topAnchor="6.0" />
+            <Label layoutX="418.0" layoutY="11.0" text="n'" />
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <BorderPane prefHeight="613.0" prefWidth="280.0" BorderPane.alignment="CENTER">
+         <center>
+            <Pane fx:id="pHopfield" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;" BorderPane.alignment="CENTER" />
+         </center>
+         <top>
+            <Label text="Hopfield Network" BorderPane.alignment="CENTER" />
+         </top>
+         <bottom>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="bComputeHopfield" mnemonicParsing="false" onAction="#onActionbComputeHopfield" prefHeight="25.0" prefWidth="302.0" text="Compute">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </VBox.margin></Button>
+                  <Label fx:id="lLengthHopfield" alignment="CENTER" prefHeight="15.0" prefWidth="274.0" text="Length" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="lTimeHopfield" alignment="CENTER" contentDisplay="CENTER" prefHeight="15.0" prefWidth="351.0" text="Time: ?" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="lIsValid" alignment="CENTER" prefHeight="15.0" prefWidth="274.0" text="Valid: ?">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Button fx:id="bConvergence" mnemonicParsing="false" onAction="#onActionbConvergence" prefHeight="25.0" prefWidth="340.0" text="Graph convergence">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </bottom>
+      </BorderPane>
+   </left>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="280.0" BorderPane.alignment="CENTER">
+         <top>
+            <Label text="Nearest Neighbor" BorderPane.alignment="CENTER" />
+         </top>
+         <center>
+            <Pane fx:id="pNearest" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;" BorderPane.alignment="CENTER" />
+         </center>
+         <bottom>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="bComputeNearest" mnemonicParsing="false" onAction="#onActionbComputeNearest" prefHeight="25.0" prefWidth="331.0" text="Compute">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Label fx:id="lLengthNearest" alignment="CENTER" prefHeight="15.0" prefWidth="274.0" text="Length">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="lTimeNearest" alignment="CENTER" prefHeight="15.0" prefWidth="337.0" text="Time: ?">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </bottom>
+      </BorderPane>
+   </center>
+   <right>
+      <BorderPane prefHeight="613.0" prefWidth="280.0" BorderPane.alignment="CENTER">
+         <top>
+            <Label text="Optimal/Random" BorderPane.alignment="CENTER" />
+         </top>
+         <center>
+            <Pane fx:id="pOptimal" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;" BorderPane.alignment="CENTER" />
+         </center>
+         <bottom>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="bComputeOptimal" mnemonicParsing="false" onAction="#onActionbComputeOptimal" prefHeight="25.0" prefWidth="296.0" text="Compute optimal">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="bComputeRandom" mnemonicParsing="false" onAction="#onActionbComputeRandom" prefHeight="25.0" prefWidth="289.0" text="Compute random">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Label fx:id="lLengthOptimal" alignment="CENTER" prefHeight="15.0" prefWidth="274.0" text="Length">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="lTimeOptimal" alignment="CENTER" prefHeight="15.0" prefWidth="304.0" text="Time: ?">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </bottom>
+      </BorderPane>
+   </right>
+</BorderPane>
